@@ -7,10 +7,10 @@ services:
       - "80:80"
     restart: always
     environment:
-      WORDPRESS_DB_HOST: 
-      WORDPRESS_DB_USER: 
-      WORDPRESS_DB_PASSWORD: 
-      WORDPRESS_DB_NAME: 
+      WORDPRESS_DB_HOST: db.chi-sin.link
+      WORDPRESS_DB_USER: cfc101
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
     volumes:
       - ~/wordpress/html:/var/www/html
 
@@ -21,9 +21,9 @@ services:
       ports:
           - 40000:80
       environment:
-          PMA_HOST: 
-          PMA_USER: 
-          PMA_PASSWORD: 
+          PMA_HOST: cfc101
+          PMA_USER: wordpress
+          PMA_PASSWORD: wordpress
 
 
 volumes:
