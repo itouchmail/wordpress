@@ -15,17 +15,19 @@ services:
       - ~/wordpress/html:/var/www/html
 
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      volumes:
-          - ~/sessions
-      ports:
-          - 40000:80
-      environment:
-          PMA_HOST: db.chi-sin.link
-          PMA_USER: 
-          PMA_PASSWORD: 
+    image: phpmyadmin/phpmyadmin
+    volumes:
+        - ~/sessions
+    ports:
+        - 40000:80
+    restart: always
+    environment:
+        PMA_HOST: db.chi-sin.link
+        PMA_USER:
+        PMA_PASSWORD:
 
 
 volumes:
   db_data:
+
 
