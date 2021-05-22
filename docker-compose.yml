@@ -26,6 +26,3 @@ services:
         PMA_USER:
         PMA_PASSWORD:
 
-
-volumes:
-  db_data:
